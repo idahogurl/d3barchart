@@ -19,13 +19,12 @@ var ParallelUglifyPluginConfig = new ParallelUglifyPlugin({
   },
   module: {
     loaders: [
-            //{
-            //    test: /\.scss$/,
-            //    loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
-            //},
             {
-              test: /\.tsx|.\ts$/, 
-            //test: /.\ts$/, 
+               test: /\.scss$/,
+               loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
+            },
+            {
+              test: /.\ts$/, 
               include: __dirname + '/typescript', 
               exclude: /node_modules/, 
               loader: "typescript-loader"
